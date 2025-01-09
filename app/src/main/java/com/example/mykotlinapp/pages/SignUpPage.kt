@@ -9,6 +9,6 @@ import com.example.mykotlinapp.R
 class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup) // Links to the sign_up.xml layout
+        setContentView(R.layout.signup) 
     }
 }
