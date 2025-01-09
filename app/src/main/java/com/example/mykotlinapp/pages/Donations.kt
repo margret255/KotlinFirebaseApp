@@ -9,6 +9,6 @@ import com.example.mykotlinapp.R
 class Donations : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.donations) // Links to the donations.xml layout
+        setContentView(R.layout.donations) 
     }
 }
