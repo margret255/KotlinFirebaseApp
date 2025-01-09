@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.cardview.v7)
     implementation(libs.androidx.cardview)
+    implementation(libs.mediation.test.suite)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

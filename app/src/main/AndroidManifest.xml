@@ -12,17 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyKotlinApp"
         tools:targetApi="31">
+
+        <!-- Set Homepage as the launcher activity -->
+        <activity android:name=".pages.Homepage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity is still part of the app but no longer the launcher -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyKotlinApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.MyKotlinApp" />
+        <activity android:name=".pages.SignUp" />
+        <activity android:name=".pages.Login" />
+        <activity android:name=".pages.Donations" />
+        <activity android:name=".pages.ViewDonations" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
