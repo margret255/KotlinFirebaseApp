@@ -8,7 +8,7 @@
     android:background="@color/app_theme"
     tools:context=".MainActivity">
 
-    <!-- Title Text -->
+ 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_margin="32dp" />
 
-    <!-- Name Field -->
+  
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="0dp"
@@ -36,7 +36,6 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp" />
 
-    <!-- Email Field -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="0dp"
@@ -49,7 +48,7 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp" />
 
-    <!-- Password Field -->
+   
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="0dp"
@@ -61,8 +60,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp" />
+    
 
-    <!-- Login Button -->
+  
     <Button
         android:id="@+id/loginButton"
         android:layout_width="0dp"
@@ -76,7 +76,7 @@
         android:backgroundTint="@color/white"
         android:textColor="@color/app_theme" />
 
-    <!-- Forgot Password Text -->
+   
     <TextView
         android:id="@+id/forgotPasswordText"
         android:layout_width="wrap_content"
