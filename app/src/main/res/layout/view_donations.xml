@@ -3,6 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Add your View Donations UI components here -->
+  
 
 </androidx.constraintlayout.widget.ConstraintLayout>
