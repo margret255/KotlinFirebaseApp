@@ -126,7 +126,7 @@
             android:drawablePadding="8dp"
             android:cornerRadius="10dp"
             android:padding="12dp"
-            android:elevation="4dp" />
+            android:elevation="5dp" />
     </LinearLayout>
 
     <TextView
