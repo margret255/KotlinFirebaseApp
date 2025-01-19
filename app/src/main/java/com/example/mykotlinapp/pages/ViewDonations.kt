@@ -12,3 +12,4 @@ class ViewDonations : AppCompatActivity() {
         setContentView(R.layout.view_donations) 
     }
 }
+.
