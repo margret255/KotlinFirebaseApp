@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mykotlinapp.R
 
 class Homepage : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) { // Fixed typo in 'savedInstanceState'
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home) 
     }
