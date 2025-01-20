@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="Background.jpeg"> 
+    android:background="Background.jpeg"> <!-- Use Background.jpeg here -->
 
+    <!-- Welcome Text -->
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="24dp" />
 
- 
+    <!-- Search Bar -->
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/searchBar"
         android:layout_width="0dp"
@@ -37,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
 
-    
+    <!-- Categories Section -->
     <TextView
         android:id="@+id/categoriesLabel"
         android:layout_width="wrap_content"
@@ -51,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="8dp" />
 
-   
+    <!-- Horizontal Categories RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoriesRecyclerView"
         android:layout_width="0dp"
@@ -63,7 +64,7 @@
         android:layout_marginBottom="24dp"
         android:scrollbars="horizontal" />
 
-   
+    <!-- Food Items Section -->
     <TextView
         android:id="@+id/foodItemsLabel"
         android:layout_width="wrap_content"
@@ -77,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="8dp" />
 
-   
+    <!-- Food Items RecyclerView (Vertical list) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/foodItemsRecyclerView"
         android:layout_width="0dp"
@@ -88,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="24dp" />
 
-   
+    <!-- Menu and Order Buttons -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -99,6 +100,7 @@
         android:layout_marginTop="16dp"
         android:weightSum="2">
 
+        <!-- View Menu Button -->
         <Button
             android:id="@+id/menuButton"
             android:layout_width="0dp"
@@ -114,6 +116,7 @@
             android:padding="12dp"
             android:elevation="4dp" />
 
+        <!-- Place Order Button -->
         <Button
             android:id="@+id/orderButton"
             android:layout_width="0dp"
@@ -126,9 +129,10 @@
             android:drawablePadding="8dp"
             android:cornerRadius="10dp"
             android:padding="12dp"
-            android:elevation="5dp" />
+            android:elevation="4dp" />
     </LinearLayout>
 
+    <!-- Forgot Password Link -->
     <TextView
         android:id="@+id/forgotPasswordLink"
         android:layout_width="wrap_content"
