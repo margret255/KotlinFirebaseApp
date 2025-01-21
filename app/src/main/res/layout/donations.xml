@@ -1,8 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFF5E1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donate Food Details"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_below="@id/title"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Type"
+            android:layout_below="@id/name"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/preferred_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preferred Time"
+            android:layout_below="@id/food_name"
+            android:layout_marginBottom="8dp"/>
+
+   
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:layout_below="@id/preferred_time"
+            android:layout_marginBottom="8dp"/>
+
+   
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:layout_below="@id/date"
+            android:layout_marginBottom="8dp"/>
+
+    
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/quantity"
+            android:layout_marginBottom="8dp"
+            android:background="#CCC"
+            android:contentDescription="Food Image"/>
 
   
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_below="@id/food_image"
+            android:background="#FFA500"
+            android:textColor="#FFF"/>
+    </RelativeLayout>
+</ScrollView>
