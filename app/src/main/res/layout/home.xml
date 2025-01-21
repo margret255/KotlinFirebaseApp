@@ -1,151 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp"
-    android:background="Background.jpeg"> <!-- Use Background.jpeg here -->
+    android:background="#F5EFE7"
+    tools:context=".HomeActivity">
 
-    <!-- Welcome Text -->
+  
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/illustration_image" />
+
+
     <TextView
-        android:id="@+id/welcomeText"
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Foodie Delight!"
-        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:text="Don't throw, Send it to us."
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#2F4F4F"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="24dp" />
-
-    <!-- Search Bar -->
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/searchBar"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:hint="Search for food..."
-        android:textColorHint="#A9A9A9"
         android:textColor="#333333"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
+        android:layout_marginBottom="8dp" />
+
+  
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Help us deliver unused food to those in need."
         android:textSize="16sp"
-        android:background="Background.jpeg"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#666666"
         android:layout_marginBottom="16dp" />
 
-    <!-- Categories Section -->
-    <TextView
-        android:id="@+id/categoriesLabel"
+ 
+    <Button
+        android:id="@+id/getStartedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Explore Categories"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#2F4F4F"
-        app:layout_constraintTop_toBottomOf="@id/searchBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="8dp" />
+        android:layout_gravity="center"
+        android:backgroundTint="#FF9800"
+        android:text="Get Started"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
-    <!-- Horizontal Categories RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoriesRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/categoriesLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="24dp"
-        android:scrollbars="horizontal" />
-
-    <!-- Food Items Section -->
-    <TextView
-        android:id="@+id/foodItemsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Popular Dishes"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#2F4F4F"
-        app:layout_constraintTop_toBottomOf="@id/categoriesRecyclerView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Food Items RecyclerView (Vertical list) -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/foodItemsRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/foodItemsLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="24dp" />
-
-    <!-- Menu and Order Buttons -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/foodItemsRecyclerView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:weightSum="2">
-
-        <!-- View Menu Button -->
-        <Button
-            android:id="@+id/menuButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="SignUp"
-            android:backgroundTint="#FF6347"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="8dp"
-            android:drawableLeft="@drawable/ic_menu"
-            android:drawablePadding="8dp"
-            android:cornerRadius="10dp"
-            android:padding="12dp"
-            android:elevation="4dp" />
-
-        <!-- Place Order Button -->
-        <Button
-            android:id="@+id/orderButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Login"
-            android:backgroundTint="#32CD32"
-            android:textColor="@android:color/white"
-            android:drawableLeft="@drawable/ic_order"
-            android:drawablePadding="8dp"
-            android:cornerRadius="10dp"
-            android:padding="12dp"
-            android:elevation="4dp" />
-    </LinearLayout>
-
-    <!-- Forgot Password Link -->
-    <TextView
-        android:id="@+id/forgotPasswordLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:textSize="14sp"
-        android:textColor="#007BFF"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/orderButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:focusable="true" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
