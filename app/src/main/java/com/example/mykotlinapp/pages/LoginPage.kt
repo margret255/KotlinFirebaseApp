@@ -18,7 +18,7 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        auth = FirebaseAuth.getInstance()  // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()  
 
         val emailEditText: EditText = findViewById(R.id.editTextEmail)
         val passwordEditText: EditText = findViewById(R.id.editTextPassword)
@@ -28,7 +28,7 @@ class Login : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            // Validate inputs
+        
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 // Authenticate user using Firebase
                 auth.signInWithEmailAndPassword(email, password)
@@ -38,9 +38,9 @@ class Login : AppCompatActivity() {
                             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
 
                             // Redirect to the Home activity or page
-                            val intent = Intent(this, HomeActivity::class.java) // Replace with your HomeActivity
+                            val intent = Intent(this, HomeActivity::class.java) 
                             startActivity(intent)
-                            finish()  // Optional: finish login activity so user can't go back
+                            finish()  
                         } else {
                             // If sign-in fails, display a message to the user
                             Toast.makeText(this, "Authentication Failed. Please check your credentials.", Toast.LENGTH_SHORT).show()
