@@ -46,7 +46,7 @@ class SignUp : AppCompatActivity() {
                     // Store user data in Firestore
                     user?.let { saveUserDataToFirestore(it.uid, email) }
                 } else {
-                    // Sign-up failed
+               
                     Toast.makeText(this, "Sign-up failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
