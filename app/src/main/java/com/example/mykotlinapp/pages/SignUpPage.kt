@@ -17,7 +17,7 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup)
 
-        auth = FirebaseAuth.getInstance()  // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance() 
         val emailEditText: EditText = findViewById(R.id.editTextEmail)
         val passwordEditText: EditText = findViewById(R.id.editTextPassword)
         val signUpButton: Button = findViewById(R.id.loginButton)
@@ -26,7 +26,7 @@ class SignUp : AppCompatActivity() {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
 
-            // Validate user input
+         
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             } else {
@@ -39,14 +39,14 @@ class SignUp : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Account creation successful
+                   
                     val user = auth.currentUser
                     Toast.makeText(this, "Sign-up successful!", Toast.LENGTH_SHORT).show()
 
-                    // Store user data in Firestore
+                 
                     user?.let { saveUserDataToFirestore(it.uid, email) }
                 } else {
-               
+                 
                     Toast.makeText(this, "Sign-up failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -59,7 +59,7 @@ class SignUp : AppCompatActivity() {
             "uid" to userId
         )
 
-        // Save the user data to the Firestore collection
+     
         db.collection("users").document(userId)
             .set(user)
             .addOnSuccessListener {
