@@ -8,6 +8,7 @@
     android:padding="16dp"
     tools:context=".HomeActivity">
 
+
   
     <ImageView
         android:id="@+id/illustration"
