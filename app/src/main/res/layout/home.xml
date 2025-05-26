@@ -18,7 +18,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/img" />
 
-
+ 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
