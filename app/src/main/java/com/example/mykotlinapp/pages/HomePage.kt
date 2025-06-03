@@ -7,8 +7,8 @@ import com.example.mykotlinapp.R
 class Homepage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home) 
+        setContentView(R.layout.home)
     }
 }
-
+#not yet done
 
